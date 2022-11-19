@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class CordCoverMaxPoint {
 
-//    TODO 待看
+//    FIXME OOOPS!
 
     /**
      * 长度为L的绳子最多覆盖几个点，请保证arr有序(N*Log(N))
