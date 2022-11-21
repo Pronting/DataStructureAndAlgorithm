@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @Description: 素数加速
+ * @Description: 埃式筛法
  * @Author: pront
  * @Time:2022-11-17 21:20
  */
@@ -30,13 +30,12 @@ public class PrimeAccelerate {
             }
         }
         return list.stream().filter(i -> i != 0).collect(Collectors.toList());
+
     }
 
     public static void main(String[] args) {
-        List<Integer> primeAc = getPrimeAc(20);
-        for (Integer integer : primeAc) {
-            System.out.println(integer);
-        }
+        List<Integer> primeAc = getPrimeAc(50);
+        System.out.println(primeAc);
 
     }
 }
