@@ -5,5 +5,5 @@ package priv.pront.code.hash;
  * @Author: pront
  * @Time:2022-11-22 18:29
  */
-public class SubvalueEqualK {
+public class SubValueEqualK {
 }
