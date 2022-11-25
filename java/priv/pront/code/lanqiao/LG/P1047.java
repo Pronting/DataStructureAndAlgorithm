@@ -13,6 +13,8 @@ public class P1047 {
 
     private static Map<Integer, Integer> regionEndMap = new HashMap<>();
     private static Map<Integer, Integer> regionBeginMap = new HashMap<>();
+    private static Map<Integer, Integer> otherMap = new HashMap<>();
+
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -31,26 +33,41 @@ public class P1047 {
         for (Map.Entry<Integer, Integer> cur : regionBeginMap.entrySet()) {
             begin = cur.getValue();
         }
+        for (int i = 0; i <m; i++) {
+
+        }
         System.out.println(begin + 1 + l - end + 1);
     }
 
     private static void getRegion(int begin, int end) {
         if (regionEndMap.isEmpty()) {
             regionEndMap.put(begin, end);
-        }else{
+        } else {
             for (Map.Entry<Integer, Integer> cur : regionEndMap.entrySet()) {
                 int endValue = cur.getValue();
-                if (endValue < end) {
+                if (endValue < end && begin >= endValue) {
                     cur.setValue(end);
+                } else {
+                    if (otherMap.isEmpty()) {
+                        otherMap.put(begin, end);
+                    }else{
+                        if(otherMap.containsKey(begin) && otherMap.get(begin) < end){
+                            otherMap.put(begin, end);
+                        }
+                        for (Map.Entry<Integer, Integer> cc : otherMap.entrySet()) {
+//                            TODO
+                            cc.getKey();
+                        }
+                    }
                 }
             }
         }
         if (regionBeginMap.isEmpty()) {
             regionBeginMap.put(end, begin);
-        }else{
+        } else {
             for (Map.Entry<Integer, Integer> cur : regionBeginMap.entrySet()) {
                 int beginValue = cur.getValue();
-                if (beginValue > begin) {
+                if (beginValue > begin && end <= beginValue) {
                     cur.setValue(begin);
                 }
             }

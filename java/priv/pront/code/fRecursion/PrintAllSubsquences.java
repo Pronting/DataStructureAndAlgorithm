@@ -1,4 +1,4 @@
-package priv.pront.code.forceRecursion;
+package priv.pront.code.fRecursion;
 
 import java.util.ArrayList;
 import java.util.List;

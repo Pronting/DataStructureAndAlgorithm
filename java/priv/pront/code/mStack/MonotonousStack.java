@@ -1,4 +1,4 @@
-package priv.pront.code.DoubleQueueAndMonotoneStack;
+package priv.pront.code.mStack;
 
 import java.util.ArrayList;
 import java.util.List;

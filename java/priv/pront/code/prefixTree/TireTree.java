@@ -1,4 +1,4 @@
-package priv.pront.code.greedyAndTire;
+package priv.pront.code.prefixTree;
 
 /**
  * @Description: 前缀树

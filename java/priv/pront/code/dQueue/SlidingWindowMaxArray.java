@@ -1,4 +1,4 @@
-package priv.pront.code.DoubleQueueAndMonotoneStack;
+package priv.pront.code.dQueue;
 
 import java.util.LinkedList;
 

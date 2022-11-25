@@ -40,7 +40,7 @@ public class UniqueBST {
         return res;
     }
 
-// FIXME 待看
+// FIXME 方法有问题
     public static int numTree(int n) {
         if (n < 2) {
             return 1;
@@ -51,9 +51,16 @@ public class UniqueBST {
         for (int i = 1; i < n + 1; i++) {
 //            左侧节点个数为j-1 ,右侧节点个数为i-j
             for (int j = 0; j <= i - 1; j++) {
+//                左侧节点个数j 右侧为i -j -1
                 dp[i] = dp[j] * dp[i - j - 1];
             }
         }
         return dp[n];
+    }
+
+    public static void main(String[] args) {
+        int process = process(3);
+        System.out.println(numTree(3));
+        System.out.println(process);
     }
 }

@@ -1,4 +1,4 @@
-package priv.pront.code.forceRecursion;
+package priv.pront.code.fRecursion;
 
 /**
  * @Description: N皇后问题是指在N*N的棋盘上要摆N个皇后，要求任何两个皇后不同行、不同列，

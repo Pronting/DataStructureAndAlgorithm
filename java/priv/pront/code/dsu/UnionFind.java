@@ -1,4 +1,4 @@
-package priv.pront.code.DSU;
+package priv.pront.code.dsu;
 
 import java.util.HashMap;
 import java.util.List;

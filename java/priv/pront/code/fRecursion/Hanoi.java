@@ -1,4 +1,4 @@
-package priv.pront.code.forceRecursion;
+package priv.pront.code.fRecursion;
 
 /**
  * @Description: 汉诺塔问题

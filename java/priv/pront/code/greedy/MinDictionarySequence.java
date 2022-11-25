@@ -1,4 +1,4 @@
-package priv.pront.code.greedyAndTire;
+package priv.pront.code.greedy;
 
 import java.util.Arrays;
 import java.util.Comparator;

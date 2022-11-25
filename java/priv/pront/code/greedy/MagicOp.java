@@ -1,4 +1,4 @@
-package priv.pront.code.greedyAndTire;
+package priv.pront.code.greedy;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -11,24 +11,22 @@ import java.util.HashSet;
  */
 public class MagicOp {
 
-    public static int maxOps(int[] arr1, int[] arr2) {
+    private static int maxOps(int[] arr1, int[] arr2) {
         double sum1 = 0;
-        for (int i = 0; i < arr1.length; i++) {
-            sum1 += arr1[i];
+        for (int j : arr1) {
+            sum1 += j;
         }
         double sum2 = 0;
-        for (int i = 0; i < arr2.length; i++) {
-            sum2 += arr2[i];
+        for (int j : arr2) {
+            sum2 += j;
         }
         if (avg(sum1, arr1.length) == avg(sum2, arr2.length)) {
             return 0;
         }
 
 //        平均值不相等
-        int[] arrMore = null;
-        int[] arrLess = null;
-        double sumMore = 0;
-        double sumLess = 0;
+        int[] arrMore,arrLess;
+        double sumMore,sumLess;
         if (avg(sum1, arr1.length) > avg(sum2, arr2.length)) {
             arrMore = arr1;
             sumMore = sum1;
@@ -64,7 +62,7 @@ public class MagicOp {
     }
 
 
-    public static double avg(double sum, int size) {
-        return 2.0;
+    private static double avg(double sum, int size) {
+        return sum / (double) (size);
     }
 }

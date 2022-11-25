@@ -1,4 +1,4 @@
-package priv.pront.code.tabulation;
+package priv.pront.code.watchdog;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,11 +10,9 @@ import java.util.Map;
  */
 public class CordCoverMaxPoint {
 
-//    FIXME OOOPS!
-
+//    FIXME 对数器 OOOPS!
     /**
-     * 长度为L的绳子最多覆盖几个点，请保证arr有序(N*Log(N))
-     *
+     * 二分法查找
      * @param arr
      * @param L
      * @return
@@ -29,6 +27,7 @@ public class CordCoverMaxPoint {
     }
 
     /**
+     * 滑动窗口
      * 在arr[0..R]范围上，找满足>=value的最左位置
      *
      * @param arr

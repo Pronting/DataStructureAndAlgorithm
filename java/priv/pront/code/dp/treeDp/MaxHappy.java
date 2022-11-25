@@ -1,4 +1,4 @@
-package priv.pront.code.treeDp;
+package priv.pront.code.dp.treeDp;
 
 /**
  * @Description: 最大快乐值问题

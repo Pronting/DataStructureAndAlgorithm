@@ -1,4 +1,4 @@
-package priv.pront.code.tabulation;
+package priv.pront.code.watchdog;
 
 /**
  * @Description: 一个8只能装8个苹果，6只能装6个苹果的袋子，求最少的袋子装完所有苹果

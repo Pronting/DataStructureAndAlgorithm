@@ -1,4 +1,4 @@
-package priv.pront.code.treeDp;
+package priv.pront.code.dp.treeDp;
 
 /**
  * @Description: 求二叉树中任意两点的最大距离
