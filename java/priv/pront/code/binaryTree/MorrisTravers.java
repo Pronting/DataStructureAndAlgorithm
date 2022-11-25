@@ -1,4 +1,4 @@
-package priv.pront.code.dp.treeDp;
+package priv.pront.code.binaryTree;
 
 /**
  * @Description: Morris 遍历(线索二叉树)
