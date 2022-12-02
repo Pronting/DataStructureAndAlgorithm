@@ -1,4 +1,4 @@
-package priv.pront.code.dp;
+package priv.pront.code.others;
 
 /**
  * @Description: 括号问题

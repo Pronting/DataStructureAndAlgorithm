@@ -1,4 +1,4 @@
-package priv.pront.code.dp;
+package priv.pront.code.others;
 
 /**
  * @Description: 求一段括号中最长的完成括号长度
