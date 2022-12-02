@@ -1,4 +1,4 @@
-package priv.pront.code.dp;
+package priv.pront.code.dp.recursion;
 
 /**
  * @Description: 二叉树的最大路径

@@ -1,4 +1,4 @@
-package priv.pront.code.dp;
+package priv.pront.code.dp.recursion;
 
 /**
  * @Description: 一段数字能转换为多少种字母

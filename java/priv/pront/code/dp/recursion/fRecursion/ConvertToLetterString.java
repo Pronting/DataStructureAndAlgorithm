@@ -1,4 +1,4 @@
-package priv.pront.code.fRecursion;
+package priv.pront.code.dp.recursion.fRecursion;
 
 /**
  * 规定1和A对应、2和B对应、3和C对应...
