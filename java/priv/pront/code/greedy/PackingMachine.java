@@ -29,6 +29,7 @@ public class PackingMachine {
         //答案
         int ans = 0;
         for (int i = 0; i < arr.length; i++) {
+//            负 需要输入   正 需要输出
             int L = i * avg - leftSum;
             int R = (size - i - 1) * avg - (sum - leftSum - arr[i]);
             if (L > 0 && R > 0) {
