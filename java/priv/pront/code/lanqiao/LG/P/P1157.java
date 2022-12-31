@@ -1,8 +1,6 @@
-package priv.pront.code.lanqiao.LG;
+package priv.pront.code.lanqiao.LG.P;
 
-import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 
 /**
  * @Description:

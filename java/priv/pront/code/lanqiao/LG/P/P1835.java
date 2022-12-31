@@ -1,4 +1,4 @@
-package priv.pront.code.lanqiao.LG;
+package priv.pront.code.lanqiao.LG.P;
 
 import java.io.*;
 import java.util.ArrayList;
