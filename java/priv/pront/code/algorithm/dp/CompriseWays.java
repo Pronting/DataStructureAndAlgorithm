@@ -1,7 +1,7 @@
 package priv.pront.code.algorithm.dp;
 
 /**
- * @Description:
+ * @Description: 01背包问题
  * @Author: pront
  * @Time:2023-01-01 13:16
  */

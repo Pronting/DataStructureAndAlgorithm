@@ -1,4 +1,4 @@
-package priv.pront.code.algorithm.fibonacci;
+package priv.pront.code.algorithm.greedy;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -41,19 +41,20 @@ public class ChooseWork {
         }
         int[] ans = new int[ability.length];
         for (int i = 0; i < ability.length; i++) {
-            Integer key = map.ceilingKey(ability[i]);
+            Integer key = map.floorKey(ability[i]);
             ans[i] = key != null ? map.get(key) : 0;
         }
         return ans;
     }
 
     public static void main(String[] args) {
+//    FIXME
         TreeMap<Integer, Integer> map = new TreeMap<>();
-        Integer key = map.ceilingKey(5);
+        Integer key = map.floorKey(5);
         int test1 = key != null ? map.get(key) : 0;
         System.out.println(test1);
         System.out.println("====");
-        int test2 = map.get(map.ceilingKey(5));
+        int test2 = map.get(map.floorKey(5));
         System.out.println(test2);
     }
 }
