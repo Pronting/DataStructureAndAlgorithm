@@ -19,8 +19,10 @@ public class P1008 {
             x = (i * 3);
             string = i + "" + y + "" + x;
             for (int k = 0; k < 9; k++) {
-                if (string.charAt(k) != '0')//题目要求只能1到9
+                //题目要求只能1到9
+                if (string.charAt(k) != '0') {
                     set.add(string.charAt(k));
+                }
             }
             if (set.size() == 9) {
                 System.out.println(i + " " + y + " " + x);
