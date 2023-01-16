@@ -1,4 +1,4 @@
-package priv.pront.code.lanqiao.LG.P.dfs;
+package priv.pront.code.lanqiao.LG.P.binarySearch;
 
 import java.util.Scanner;
 
