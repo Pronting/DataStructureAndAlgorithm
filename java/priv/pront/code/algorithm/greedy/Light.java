@@ -61,6 +61,7 @@ public class Light {
         return ans;
     }
 
+    ///    FIXME DP 结果不匹配 O(1)
     public static int minLight2(String s) {
         if (s == null || s.length() == 0) {
             return 0;
@@ -104,9 +105,42 @@ public class Light {
         return dp[1][1];
     }
 
+
+    private static int minLight3(String s) {
+        char[] str = s.toCharArray();
+        int index = 0;
+
+        int light = 0;
+//        当前来到i位置，一定要保证之前的等，彻底不会影响到i位置
+        while (index < str.length) {
+            if (str[index] == 'X') {
+                index++;
+            } else { // str[index] == '.'
+                light++;
+                if (index + 1 == str.length) {
+                    break;
+                } else {  //如果下面有位置
+                    if (str[index + 1] == 'X') {
+                        index = index + 2;
+                    } else {
+                        index = index + 3;
+                    }
+                }
+            }
+        }
+        return light;
+    }
+
     public static void main(String[] args) {
-        String test = "...X.X.X..XX.XX.X.X.X.X.XX.XXX.X.XXX.XX";
-        System.out.println(minLight1(test));
-        System.out.println(minLight2(test));
+        String test1 = "...X.X.X..XX.XX.X.X.X.X.XX.XXX.X.XXX.XX";
+        String test2 = "........X.........";
+        System.out.println(minLight1(test1));
+        System.out.println(minLight2(test1));
+        System.out.println(minLight3(test1));
+        System.out.println("===========================");
+
+        System.out.println(minLight1(test2));
+        System.out.println(minLight2(test2));
+        System.out.println(minLight3(test2));
     }
 }
