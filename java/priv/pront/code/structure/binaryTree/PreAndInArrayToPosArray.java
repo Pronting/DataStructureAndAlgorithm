@@ -4,7 +4,6 @@ import java.util.HashMap;
 
 /**
  * @Description: 已知一棵二叉树中没有重复节点，且给定了这棵树的中序遍历数组和先序遍历数组，返回后序遍历数组
- *
  * @Author: pront
  * @Time:2023-01-15 15:49
  */
@@ -42,6 +41,25 @@ public class PreAndInArrayToPosArray {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
+    }
+
+    private static void setPos2(int[] pre, int[] in, int[] pos, int prei, int prej, int ini, int inj, int posi, int posj) {
+        if (prei > prej) {
+            return;
+        }
+        if (prei == prej) {
+            pos[posi] = pre[prei];
+            return;
+        }
+        pos[posj] = pre[prei];
+        int find = ini;
+        for (; find <= ini; find++) {
+            if (in[find] == pre[prei]) {
+                break;
+            }
+        }
+        setPos2(pre, in, pos, prei + 1, prei + find - ini, ini, find - 1, posi, posi + find - ini);
+        setPos2(pre, in, pos, prei + find - ini + 1, prej, find + 1, inj, posi + find - ini + 1, posj - 1);
     }
 
     public static void main(String[] args) {
