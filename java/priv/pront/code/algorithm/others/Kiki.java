@@ -97,6 +97,7 @@ public class Kiki {
     }
 
     public static void main(String[] args) {
+
         int add = 6;
         int times = 5;
         int del = 1;
