@@ -14,8 +14,8 @@ public class P8647_binarySearch {
     private static int[] h = new int[100001];
     private static int N = 100001;
 
-    //判断和是否满足k个小朋友分
-    public static int getSum(int border) {//参数u就是所选的边长
+    //和是否满足k个小朋友分
+    public static int getSum(int border) {
         int sum = 0;
         for (int i = 0; i < n; i++) {
             sum = sum + (w[i] / border) * (h[i] / border);

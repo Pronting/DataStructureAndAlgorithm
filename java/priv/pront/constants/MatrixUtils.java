@@ -25,4 +25,14 @@ public class MatrixUtils {
             System.out.println();
         }
     }
+
+    public static int[][] generateMatrix(int rowSize, int colSize) {
+        int[][] res = new int[rowSize][colSize];
+        for (int i = 0; i != rowSize; i++) {
+            for (int j = 0; j != colSize; j++) {
+                res[i][j] = (int) (Math.random() * 15);
+            }
+        }
+        return res;
+    }
 }
