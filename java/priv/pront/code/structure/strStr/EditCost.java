@@ -11,6 +11,7 @@ public class EditCost {
         if (str1 == null || str2 == null) {
             return 0;
         }
+
         char[] chs1 = str1.toCharArray();
         char[] chs2 = str2.toCharArray();
         int row = chs1.length + 1;
