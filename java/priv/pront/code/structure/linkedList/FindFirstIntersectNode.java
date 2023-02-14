@@ -1,6 +1,6 @@
 package priv.pront.code.structure.linkedList;
 
-import priv.pront.constants.LinkedListUtils;
+import priv.pront.utils.LinkedListUtils;
 
 import java.util.HashSet;
 

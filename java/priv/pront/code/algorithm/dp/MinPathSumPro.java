@@ -1,6 +1,6 @@
 package priv.pront.code.algorithm.dp;
 
-import priv.pront.constants.MatrixUtils;
+import priv.pront.utils.MatrixUtils;
 
 /**
  * @Description: 最短路径和pro版本

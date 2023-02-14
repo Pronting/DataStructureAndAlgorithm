@@ -1,6 +1,6 @@
 package priv.pront.code.algorithm.pretreatment;
 
-import priv.pront.constants.MatrixUtils;
+import priv.pront.utils.MatrixUtils;
 
 /**
  * @Description: 求01矩阵中边长全为1的最大正方形

@@ -1,6 +1,6 @@
 package priv.pront.code.algorithm.sort.compareSort;
 
-import priv.pront.constants.ArrayUtils;
+import priv.pront.utils.ArrayUtils;
 
 /**
  * @Description: 选择排序

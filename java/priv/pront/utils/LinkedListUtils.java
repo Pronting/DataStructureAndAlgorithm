@@ -1,4 +1,4 @@
-package priv.pront.constants;
+package priv.pront.utils;
 
 
 /**

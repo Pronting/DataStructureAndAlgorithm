@@ -1,4 +1,4 @@
-package priv.pront.constants;
+package priv.pront.utils;
 
 /**
  * @Description: 矩阵工具类
