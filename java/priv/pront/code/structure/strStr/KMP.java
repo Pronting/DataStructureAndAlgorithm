@@ -41,11 +41,12 @@ public class KMP {
         next[0] = -1;
         next[1] = 0;
         int i = 2;
+//        使用那个位置的字符和i-1位置的字符相比
         int cn = 0;
         while (i < next.length) {
             if (ms[i - 1] == ms[cn]) {
                 next[i++] = ++cn;
-            } else if (cn > 0) {
+            } else if (cn > 0) {  //当前跳到cn位置的字符，和i-1位置的字符配不上
                 cn = next[cn];
             } else {
                 next[i++] = 0;
