@@ -64,7 +64,7 @@ public class ParenthesesDeep {
     }
 
     public static void main(String[] args) {
-        String test = "((()))";
+        String test = "))(())((()))";
         System.out.println(maxLength(test));
     }
 }
