@@ -12,7 +12,6 @@ public class FindMaxRowIn01Matrix {
 
     private static List<Integer> rowList;
 
-
     private static List<Integer> getMaxRow(int[][] matrix) {
         int row = 0;
         int col = matrix[0].length - 1;
