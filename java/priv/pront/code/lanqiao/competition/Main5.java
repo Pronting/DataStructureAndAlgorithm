@@ -28,39 +28,40 @@ public class Main5 {
         int ans = 0;
         for (int i = 0; i < 30; i++) {
             for (int j = 0; j < 60; j++) {
-                ans = Math.max(ans, dfs(i, j));
+                if (chs[i][j] =='1' && !visited[i][j]){
+                    ans = Math.max(ans, dfs(i, j,0));
+
+                }
             }
         }
 
         System.out.println(ans);
     }
 
-    private static int dfs(int i, int j) {
-        if (visited[i][j]) {
-            return dist[i][j];
+    private static int dfs(int i, int j,int dist) {
+        if (visited[i][j] || chs[i][j] == '0') {
+            return dist;
         }
 
-        int maxDist = 0;
-
-        if (i > 0 && chs[i - 1][j] == '1') {
-//            上
-            maxDist = Math.max(maxDist, dfs(i - 1, j));
-        }
-        if (i < 29 &&  chs[i + 1][j] == '1') {
-//            下
-            maxDist = Math.max(maxDist, dfs(i + 1, j));
-        }
-        if (j > 0 &&  chs[i][j - 1] == '1') {
-//            左
-            maxDist = Math.max(maxDist, dfs(i, j - 1));
-        }
-        if (j < 59 && chs[i][j + 1] == '1') {
-//            右
-            maxDist = Math.max(maxDist, dfs(i, j + 1));
-        }
         visited[i][j] = true;
-        dist[i][j] = maxDist + 1;
-        return dist[i][j];
+        dist++;
+        if (i - 1 >= 0  && chs[i - 1][j] == '1') {
+//            上
+            dist = dfs(i - 1, j, dist);
+        }
+        if (i + 1 < chs.length && chs[i + 1][j] == '1') {
+//            下
+            dist = dfs(i + 1, j, dist);
+        }
+        if (j - 1 >= 0 && chs[i][j - 1] == '1') {
+//            左
+            dist =  dfs(i, j - 1, dist);
+        }
+        if (j + 1 < chs[0].length && chs[i][j + 1] == '1') {
+//            右
+            dist = dfs(i, j + 1, dist);
+        }
+        return dist;
     }
 
 }
