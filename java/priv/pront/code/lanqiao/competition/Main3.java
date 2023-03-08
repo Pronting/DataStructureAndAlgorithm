@@ -23,7 +23,7 @@ public class Main3 {
                 }else{
                     month =j /10 + j % 10;
                 }
-                for(int k = 1 ; k <= 31;k ++){
+                for(int k = 1 ; k <= 30;k ++){
                     int day;
                     String dayLength = k + "";
                     if ("1".equals(dayLength)) {
