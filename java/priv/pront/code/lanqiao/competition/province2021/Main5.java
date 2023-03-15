@@ -31,10 +31,7 @@ public class Main5 {
             //砝码必定可以称出自身重量
             ans.add(t);
         }
-        //要注意的是！！重量0并不能称出来！！因此要去掉元素0
-        //我栽在这里了（佛）
         ans.remove(0);
-        //最后只需要输出答案集中的个数即可
         System.out.println(ans.size());
     }
 }
