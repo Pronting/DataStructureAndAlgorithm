@@ -64,7 +64,7 @@ public class 开灯游戏 {
     }
 
     private static void process(StringBuilder sb, int index, boolean[] beam) {
-        if (index == 9) {
+        if (index == 10) {
             check(sb,beam);
             return;
         }
@@ -79,6 +79,7 @@ public class 开灯游戏 {
         }
 //        每一次选和不选两种状态
         process(sb.append("1"), index + 1, beam);
+        sb.deleteCharAt(sb.length() - 1);
         process(sb.append("0"), index + 1, beam);
         sb.deleteCharAt(sb.length() - 1);
 
