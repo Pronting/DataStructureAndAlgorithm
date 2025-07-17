@@ -110,9 +110,28 @@ public class L739_DailyTemperture {
     }
 
 
+
+    public static int[] dailyTemperatures5(int[] temperatures) {
+        Stack<Integer> stack = new Stack<>();
+        int[] ans = new int[temperatures.length];
+        for(int i = 0; i < temperatures.length; i++){
+            int val = temperatures[i];
+            while(!stack.isEmpty() && temperatures[stack.peek()] < val){
+                int prevIndex = stack.pop();
+                ans[prevIndex] = i - prevIndex;
+            }
+            stack.push(i);
+        }
+        while(!stack.isEmpty()) ans[stack.pop()] = 0;
+        return ans;
+
+    }
+
+
+
     public static void main(String[] args) {
         int[] temperatrue = {73, 74, 75, 71, 69, 72, 76, 73};
-        for (int i : dailyTemperatures2(temperatrue)) {
+        for (int i : dailyTemperatures5(temperatrue)) {
             System.out.print(i + " ");
         }
 

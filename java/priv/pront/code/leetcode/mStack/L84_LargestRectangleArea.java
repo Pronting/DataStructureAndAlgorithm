@@ -1,7 +1,9 @@
 package priv.pront.code.leetcode.mStack;
 
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Deque;
+import java.util.Stack;
 
 /**
  * @Description:
@@ -47,5 +49,44 @@ public class L84_LargestRectangleArea {
         }
         return res;
 
+    }
+
+
+    public int largestRectangleArea2(int[] heights) {
+        if (heights.length == 1) {
+            return heights[0];
+        }
+        int len = heights.length;
+        int[] l = new int[len];
+        int[] r= new int[len];
+        int ans = -1;
+        Arrays.fill(l, -1);
+        Arrays.fill(r, len);
+        Stack<Integer> stack = new Stack<>();
+        for(int i = 0; i < len; i++){
+            while(!stack.isEmpty() && heights[i] < heights[stack.peek()]){
+                int idx = stack.peek();
+                stack.pop();
+                r[idx] = i;
+            }
+            if(!stack.isEmpty()){
+                l[i] = stack.peek();
+            }
+            stack.push(i);
+        }
+        for(int i = 0; i < len; i++){
+            int width = r[i] - l[i] - 1;
+            int area = width * heights[i];
+            ans = Math.max(ans, area);
+        }
+        return ans;
+    }
+
+
+    public static void main(String[] args) {
+        int[] heights = {2,1,5,6,2,3};
+        L84_LargestRectangleArea l84 = new L84_LargestRectangleArea();
+        int res = l84.largestRectangleArea2(heights);
+        System.out.println(res);
     }
 }
