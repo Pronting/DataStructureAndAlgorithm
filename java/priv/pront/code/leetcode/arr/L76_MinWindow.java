@@ -42,4 +42,8 @@ public class L76_MinWindow {
         return minlength == Integer.MAX_VALUE ? "" : s.substring(sidx, sidx + minlength);
     }
 
+    public static void main(String[] args) {
+        System.out.println((int)'1' - 48);
+    }
+
 }
