@@ -30,7 +30,7 @@ public class L100_IsSameTree {
 
         boolean rleft = true;
         boolean rright = true;
-        if (p.left != null && p.left != null) {
+        if (p.left != null && q.left != null) {
             rleft = isSameTree(p.left, q.left);
         } else if (p.left == null && q.left == null) {
             rleft = true;
