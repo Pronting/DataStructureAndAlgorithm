@@ -10,6 +10,7 @@ public class L530_GetMinimumDifference {
     List<Integer> list = new ArrayList<>();
 
     public int getMinimumDifference(TreeNode root) {
+        dfs(root);
         int min = Integer.MAX_VALUE;
         for(int i = 1; i < list.size(); i++){
             min = Math.min(min, list.get(i) - list.get(i - 1));
